@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ Chatbot</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        input[type=text] { width: 100%; padding: 10px; }
+        input[type=submit] { padding: 10px 20px; }
+        .response { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>ChatGPT FAQ Chatbot</h1>
+    <form method="post">
+        <label>Ask a question:</label><br>
+        <input type="text" name="question" required>
+        <input type="submit" value="Ask">
+    </form>
+    {% if response %}
+        <div class="response">Bot: {{ response }}</div>
+    {% endif %}
+</body>
+</html>
